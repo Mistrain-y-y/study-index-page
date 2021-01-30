@@ -1,0 +1,386 @@
+* {
+	    	margin: 0;
+	    	padding: 0;
+	    }
+	    /*CSS书写顺序（重点）：
+             1.布局定位属性；
+             2.自身属性；
+             3.文本属性；
+             4.其他属性CSS3。
+	      */
+body {
+	background-color: #eaeef0;
+}
+.w {
+	width: 1200px;
+	margin: auto;
+}
+/*确定版心*/
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+.clearfix:before,.clearfix:after{
+	content:"";
+	display: table;
+}
+.clearfix:after {
+	clear:both;
+	}
+.clearfix {
+	*zoom:1;
+}
+.bb {
+	position: sticky;
+	top: -25px;
+	height: 87px;
+	background-color: #fff;
+	border: 1px solid transparent;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	z-index: 1;
+}
+.header {	
+	height: 42px;
+	background-color: #fff;
+	margin-top: 35px;
+	margin-bottom: 10px;
+}
+.logo {
+	float: left;
+	/*浮动写在最上面*/
+	width: 198px;
+	height: 42px;
+	background-color: #a5ba9b;
+}
+.nav {
+	float: left;
+	/*nav不给高度，是为了将来可以继续添加文字*/
+	margin-left: 60px;
+	/*所有盒子都要浮动，因此logo也要浮动*/
+}
+.nav ul li {
+	float: left;
+	margin: 0 15px;
+}
+.nav ul li a {
+	display: block;
+	/*链接a要求是一个区域都可以点击*/
+	height: 42px;
+	padding: 0 10px;
+	/*导航栏的文字不一样多，因此用padding撑开*/
+	line-height: 42px;
+	font-size: 18px;
+	color: #050505;
+	background-color: fff;
+}
+.nav ul li a:hover {
+	border-bottom: 2px solid #df8956;
+	color: #df8956;
+}
+.search {
+	float: left;
+	width: 412px;
+	height: 42px;
+	background-color: #f0f5f6;
+	margin-left: 70px;
+}
+.search input {
+	float: left;
+	width: 345px;
+	height: 40px;
+	border: 1px solid #a5ba9b;
+	border-right: 0;
+	color: #757575;
+	font-size: 14px;
+	padding-left: 15px;
+	outline: none;
+	/*取消表单的轮廓线*/
+}
+.search button {
+	float: left;
+	width: 50px;
+	height: 42px;
+	background-color: #a5ba9b;
+	border: 0;
+	/*去掉默认边框*/
+}
+.user {
+	float: right;
+	line-height: 42px;
+	margin-right: 30px;
+	font-size: 14px;
+	color: #666;	
+}
+/*banner开始了*/
+.banner {
+	height: 421px;
+	background-color: #313e34;
+}
+.banner .w {
+	height: 421px;
+	background: url(banner2.jpg) no-repeat top center;
+}
+.subnav {
+	float: left;
+	width: 190px;
+	height: 421px;
+	background-color: rgba(0,0,0,.3);
+}
+.subnav ul li {
+	height: 46px;
+	line-height: 46px;
+}
+.subnav ul li a {
+	display: block;
+	width: 190px;
+	font-size: 14px;
+	color: white;
+	text-indent: 1.5em;
+	
+} 
+.subnav ul li a:hover {
+	background-color: rgba(0,0,0,.6);
+	color: #df8956;
+}
+.subnav ul li a span {
+	float: right;
+	margin-right: 15px;
+}
+.course {
+	float: right;
+	position: fixed;
+	top: 160px;
+	right: 100px;
+	width: 230px;
+	height: 300px;
+	/*浮动的盒子不会有外边距合并的问题*/
+	background-color: #fff;
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+	border-radius: 3px;
+	z-index: 1;
+}
+.course h2 {
+	height: 48px;
+	background-color: #a5ba9b;
+	text-align: center;
+	line-height: 48px;
+	font-size: 18px;
+	color: #fff;
+	border-radius: 3px 3px 0 0;
+}
+.bd {
+	padding: 0 21px;
+}
+.bd ul li {
+	padding: 14px 0;
+	border-bottom: 1px solid #eaeef0;
+}
+.course .bd ul li p{	
+	font-size: 12px;
+}
+.course .bd ul li a {
+	display: block;
+	font-size: 16px;
+	color: #050505;
+}
+.course .bd ul li a:hover {
+	color: #df8956;
+}
+.bd .more {
+	display: block;
+	height: 38px;
+	border: 1px solid #a5ba9b;
+	text-align: center;
+	line-height: 38px;
+	font-size: 16px;
+	font-weight: 700;
+	color: #a5ba9b;
+}
+.bd .more:hover {
+	background-color: #a5ba9b;
+	color: #fff;
+}
+.good {
+	height: 60px;
+	background-color: #fff;
+	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	margin-top: 10px;
+	line-height: 60px;
+}
+.good h3 {
+	float: left;
+	color: #a5ba9b;
+	margin: 0 30px;
+	font-size: 16px;
+}
+.good ul li {
+	float: left;
+	
+
+}
+.good ul li a {
+	height: 20px;
+	color: #050505;
+	border-left: 1px solid #a5a5a5;
+	padding: 0 30px;
+	font-size: 16px;
+}
+.good ul li a:hover {
+	color: #df8956;
+}
+.good ul {
+	float: left;
+}
+.mod {
+	float: right;
+	margin-right: 30px;
+	color: #a5ba9b;
+	font-size: 14px;
+}
+.jp {
+	margin-top: 30px;
+    border: 1px solid transparent;
+    /*设置边框，防止父级和标准子级的外边距合并*/
+}
+.jp .hd {
+	height: 33px;
+	margin-top: 14px;
+}
+.jp .hd h4 {
+	float: left;
+	color: #494949;
+	font-size: 16px;
+	margin: 0 30px;
+}
+.jp .hd a {
+	float: right;
+	margin-right: 35px;
+	margin-top: 1px;
+	color: #a5a5a5;
+	font-size: 12px;
+}
+.jp .bod {
+	margin-bottom: 20px;	
+}
+.jp .bod ul {
+	width: 1225px;
+}
+/*把ul修改得足够宽，子级li就能放的下*/
+.jp .bod ul li {
+	float: left;
+	width: 228px;
+	height: 270px;
+	background-color: #fff;
+	margin-right: 15px;
+	margin-top: 15px;
+	position: relative;
+}
+.jp .bod ul li .fly {
+	width: 40px;
+	height: 20px;
+	position: absolute;
+	top: 20px;
+	right: -5px;
+	background-color: #df8956;
+	font-size: 12px;
+	font-weight: 700;
+	text-align: center;
+	line-height: 20px;
+	color: #fff;
+	border: 1px solid #fff;
+}
+.jp .bod ul li:hover {
+	box-shadow: 0 0 10px rgba(0,0,0,.3);
+}
+.jp .bod ul li img {
+	float: left;
+	width: 228px;
+	height: 150px;
+	background-color: #a5ba9b;
+}
+.jp .bod ul li h5 {
+	float: left;
+	font-size: 14px;
+	margin: 20px;	
+}
+.jp .bod ul li h5 a {
+	color: black;
+}
+.jp .bod ul li h5 a:hover {
+    color: #df8956;
+}
+.jp .bod ul li h6 {
+	float: left;
+	margin-left: 21px;
+	margin-right: 10px;
+	font-size: 12px;
+	color: #df8956;
+}
+.jp .bod ul li p {
+	float: left;
+	font-size: 12px;
+	color: #757875;
+}
+.fo {
+	height: 300px;
+	border: 1px solid transparent;
+	background-color: #fff;
+	margin-top: 40px;
+}
+.fo .w {
+	margin-top: 30px;
+}
+.fo .w .cr {
+	float: left; 
+	width: 470px;      
+}
+.fo .w .cr img {
+	width: 198px;
+	height: 42px;
+	margin: 10px 20px;
+	background-color: #a5ba9b;
+}
+.fo .w .cr p {
+	font-size: 13px;
+	margin: 15px 20px 5px 20px;
+}
+.fo .w .cr a {
+	display: block;
+	width: 120px;
+	height: 35px;   
+    font-size: 14px;
+    line-height: 35px;
+    color: #a5ba9b;
+    border: 1px solid #a5ba9b;
+    margin: 10px 20px;
+    text-align: center;
+}
+.fo .w .cr a:hover {
+	color: #fff;
+	background-color: #a5ba9b;
+}
+.fo .w .link {
+	float: right;
+}
+.fo .w .link ul {
+    float: right;
+    margin:10px 150px 0 0;
+}
+.fo .w .link .ll {
+	margin-right: 20px;
+}
+.fo .w .link ul h4 {
+	margin-bottom: 10px;
+}
+.fo .w .link ul li {
+	font-size: 13px;
+	line-height: 23px;
+}
+.fo .w .link ul li a {
+	color: #757875;
+}
+.fo .w .link ul li a:hover {
+	color: #df8956;
+}
